@@ -44,6 +44,6 @@ exports.updateCity = async (req, res) => {
         res.status(201).json({ message: 'Population data created successfully' });
       }
     } catch (error) {
-      res.status(500).json({ error: 'Could not update population data, internal server error' });
+      res.status(400).json({ error: 'Could not update population data' });
     }
   };
