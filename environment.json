@@ -1,0 +1,5 @@
+{
+    "mongo_connection_string": "",
+    "db_name": "city-population",
+    "app_port": 5555
+}
