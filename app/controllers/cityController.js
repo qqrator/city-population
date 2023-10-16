@@ -24,8 +24,6 @@ exports.updateCity = async (req, res) => {
       const state = req.params.state? req.params.state.toLowerCase() : null;
       const city = req.params.city? req.params.city.toLowerCase() : null;
       const population = parseInt(req.body);
-      console.log(req.body)
-      console.log(population)
       if (isNaN(population) || population < 0) {
         return res.status(400).json({ error: 'Invalid population value' });
       }
@@ -46,7 +44,6 @@ exports.updateCity = async (req, res) => {
         res.status(201).json({ message: 'Population data created successfully' });
       }
     } catch (error) {
-      console.error('Error updating population:', error.message);
       res.status(500).json({ error: 'Could not update population data, internal server error' });
     }
   };
